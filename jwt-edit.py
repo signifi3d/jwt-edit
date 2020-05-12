@@ -51,8 +51,6 @@ if args.data:
 
 if args.alg:
 	header["alg"] = args.alg
-elif not args.alg:
-	header["alg"] = 'none'
 
 if args.iat:
 	if args.iat == "now":
@@ -83,7 +81,7 @@ if header["alg"] == "HS256":
 	else:
 		signature = str(base64.b64encode(bytes(hmac.new(bytes(enc_key, 'latin-1'), msg=bytes(final_token, 'latin-1'), digestmod=hashlib.sha256).hexdigest(), 'latin-1')))
 		signature = signature[2:len(signature)-1].strip('=')
-		print(final_token + '.' + str(signature))
+	print(final_token + '.' + str(signature))
 else:
 	print(final_token + '.' + str(signature))
 
