@@ -7,7 +7,7 @@ import hashlib
 import binascii
 
 
-alg_choices = ['none', 'HS256']
+alg_choices = ['none','None','NONE', 'nOne','noNe','nonE','NOne','NoNe','NonE','nONe','nOnE','noNE','NONe','nONE','NoNE','NOnE', 'HS256']
 jwt_token = []
 header = {}
 payload = {}
