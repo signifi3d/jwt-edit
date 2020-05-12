@@ -22,7 +22,7 @@ opt_parser.add_argument("-i", "--iat", required=False, help="Issued at time, can
 opt_parser.add_argument("-x", "--exp", required=False, help="Expiration time, can be an offset in minutes from the iat by prefixing with +, or a valid Unix time.")
 opt_parser.add_argument("-a", "--alg", required=False, help="Signature encryption algorithm.", choices=alg_choices)
 opt_parser.add_argument("-k", "--key", required=False, help="Encryption key.")
-opt_parser.add_argument("-p", "--print", required=False, help="Print token contents.", action="store_true")
+opt_parser.add_argument("-p", "--print", required=False, help="Print token contents before processing.", action="store_true")
 
 args = opt_parser.parse_args()
 

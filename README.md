@@ -17,3 +17,5 @@ optional arguments:
   -a {none,HS256}, --alg {none,HS256}  
                         Signature encryption algorithm.  
   -k KEY, --key KEY     Encryption key.  
+  -p, --print           Print token contents before processing.
+
